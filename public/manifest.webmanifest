@@ -1,0 +1,20 @@
+{
+  "name": "Domina",
+  "short_name": "Domina",
+  "description": "Absurd but true trivia: yes/no, order-of-magnitude estimation and cross-domain comparison.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0e1117",
+  "theme_color": "#0e1117",
+  "categories": ["games", "education", "trivia"],
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
