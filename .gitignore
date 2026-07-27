@@ -27,3 +27,6 @@ npm-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 *.tsbuildinfo
+
+# Private/local-only store & marketing assets (mirrored to private Eren-Ozcan/pictures repo)
+docs/store-assets-originals/
