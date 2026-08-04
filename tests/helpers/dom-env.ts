@@ -9,7 +9,7 @@ import { JSDOM } from 'jsdom';
  */
 export function installDom(): () => void {
   const dom = new JSDOM('<!doctype html><html><body><div id="app"></div></body></html>', {
-    url: 'https://domina.test/',
+    url: 'https://quizei.test/',
     pretendToBeVisual: true,
   });
 

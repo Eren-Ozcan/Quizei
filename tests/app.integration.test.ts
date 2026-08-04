@@ -53,7 +53,7 @@ test('the app boots to the home screen with all four modes', async () => {
   await boot();
   assert.ok($('.screen--home'), 'home screen renders');
   assert.equal($$('.mode').length, 4, 'four modes are offered');
-  assert.match(textOf('.hero__title'), /Domina/);
+  assert.match(textOf('.hero__title'), /Quizei/);
 });
 
 test('a full daily run plays through to a shareable result', async () => {

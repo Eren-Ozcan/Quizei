@@ -50,8 +50,8 @@ test('daysBetween handles month and year boundaries', () => {
 });
 
 test('the same seed always produces the same stream', () => {
-  const a = Array.from({ length: 5 }, makeRng(hashSeed('domina')));
-  const b = Array.from({ length: 5 }, makeRng(hashSeed('domina')));
+  const a = Array.from({ length: 5 }, makeRng(hashSeed('quizei')));
+  const b = Array.from({ length: 5 }, makeRng(hashSeed('quizei')));
   assert.deepEqual(a, b);
 });
 
