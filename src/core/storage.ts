@@ -1,6 +1,6 @@
 import type { Lang, QuestionType } from './types.ts';
 
-const KEY = 'domina.save.v1';
+const KEY = 'quizei.save.v1';
 
 export interface FormatStat {
   answered: number;

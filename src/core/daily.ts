@@ -32,7 +32,7 @@ export function dailyNumber(dateKey: string): number {
 const DAILY_SHAPE: QuestionType[] = ['boolean', 'numeric', 'comparison', 'numeric', 'boolean'];
 
 export function dailyQuestions(dateKey = todayKey()): Question[] {
-  const rng = seededRng(`domina-daily-${dateKey}`);
+  const rng = seededRng(`quizei-daily-${dateKey}`);
 
   const byType = new Map<QuestionType, Question[]>();
   for (const type of ['boolean', 'numeric', 'comparison'] as QuestionType[]) {

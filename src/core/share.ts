@@ -2,7 +2,7 @@ import { dailyNumber } from './daily.ts';
 import { getLang } from './i18n.ts';
 import { GRADE_EMOJI, type Grade } from './scoring.ts';
 
-const SITE = 'https://domina.pages.dev';
+const SITE = 'https://quizei.pages.dev';
 
 /**
  * Emoji-grid share text, in the shape people already know from daily word
@@ -20,7 +20,7 @@ export function dailyShareText(opts: {
   const streakLine =
     opts.streak > 1 ? (lang === 'tr' ? `🔥 ${opts.streak} gün` : `🔥 ${opts.streak} days`) : '';
 
-  const header = lang === 'tr' ? `Domina #${n} — ${opts.score} puan` : `Domina #${n} — ${opts.score} pts`;
+  const header = lang === 'tr' ? `Quizei #${n} — ${opts.score} puan` : `Quizei #${n} — ${opts.score} pts`;
 
   return [header, row, streakLine, SITE].filter(Boolean).join('\n');
 }
@@ -28,7 +28,7 @@ export function dailyShareText(opts: {
 export function streakShareText(streak: number): string {
   const lang = getLang();
   const header =
-    lang === 'tr' ? `Domina Kıyas Serisi: ${streak} 🔥` : `Domina Comparison Streak: ${streak} 🔥`;
+    lang === 'tr' ? `Quizei Kıyas Serisi: ${streak} 🔥` : `Quizei Comparison Streak: ${streak} 🔥`;
   return [header, SITE].join('\n');
 }
 
@@ -36,8 +36,8 @@ export function arenaShareText(score: number, correct: number, total: number): s
   const lang = getLang();
   const header =
     lang === 'tr'
-      ? `Domina Arena: ${score} puan (${correct}/${total})`
-      : `Domina Arena: ${score} pts (${correct}/${total})`;
+      ? `Quizei Arena: ${score} puan (${correct}/${total})`
+      : `Quizei Arena: ${score} pts (${correct}/${total})`;
   return [header, SITE].join('\n');
 }
 
