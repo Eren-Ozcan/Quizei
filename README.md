@@ -1,4 +1,4 @@
-# Domina
+# Quizei
 
 An absurd-but-true trivia game. The product isn't the answer itself — it's the
 "no way!" moment the answer creates.

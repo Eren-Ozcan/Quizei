@@ -1,4 +1,4 @@
-# Domina (Sahi)
+# Quizei (Sahi)
 
 ## Store / Marketing Assets
 
