@@ -2,7 +2,7 @@ import type { Category, Lang } from './types.ts';
 
 const STRINGS = {
   // Shell
-  appName: { tr: 'Domina', en: 'Domina' },
+  appName: { tr: 'Quizei', en: 'Quizei' },
   tagline: {
     tr: 'Saçma ama gerçek. Ne kadarını kestirebilirsin?',
     en: 'Absurd but true. How much can you call?',
@@ -139,7 +139,7 @@ const STRINGS = {
   close: { tr: 'Kapat', en: 'Close' },
   categoriesLabel: { tr: 'Kategoriler', en: 'Categories' },
   allCategories: { tr: 'Hepsi', en: 'All' },
-  shareTitleDaily: { tr: 'Domina — Günün Beşlisi', en: 'Domina — Daily Five' },
+  shareTitleDaily: { tr: 'Quizei — Günün Beşlisi', en: 'Quizei — Daily Five' },
 } as const;
 
 export type StringKey = keyof typeof STRINGS;

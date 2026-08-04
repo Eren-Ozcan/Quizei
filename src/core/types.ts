@@ -1,5 +1,5 @@
 /**
- * Domina question schema.
+ * Quizei question schema.
  *
  * Every question carries both languages and a source. The source is not
  * decoration: a wrong "fact" that goes viral is the one failure this product

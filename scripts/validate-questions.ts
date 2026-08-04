@@ -127,7 +127,7 @@ for (const [type, count] of Object.entries(stats.byType)) {
   }
 }
 
-console.log(`\nDomina question pool: ${stats.total} questions`);
+console.log(`\nQuizei question pool: ${stats.total} questions`);
 console.log('  by format:  ', stats.byType);
 console.log('  by category:', stats.byCategory);
 
