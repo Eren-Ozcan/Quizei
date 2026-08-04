@@ -1,8 +1,8 @@
 {
-  "name": "domina",
+  "name": "sahi",
   "private": true,
   "version": "0.1.0",
-  "description": "Domina — absurd-but-true trivia arena. Yes/No, Fermi estimation and cross-domain comparison, in Turkish and English.",
+  "description": "Quizei — absurd-but-true trivia arena. Yes/No, Fermi estimation and cross-domain comparison, in Turkish and English.",
   "type": "module",
   "scripts": {
     "dev": "vite",
