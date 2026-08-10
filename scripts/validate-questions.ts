@@ -127,6 +127,16 @@ for (const [type, count] of Object.entries(stats.byType)) {
   }
 }
 
+// Category coverage isn't checked above (only per-type counts are), so a
+// declared category with zero questions ships silently until a player picks
+// it and gets an empty pool. Warning rather than erroring since fixing this
+// means adding sourced content, not a code change.
+for (const category of CATEGORIES) {
+  if (!stats.byCategory[category]) {
+    warnings.push(`category "${category}" has zero questions`);
+  }
+}
+
 console.log(`\nQuizei question pool: ${stats.total} questions`);
 console.log('  by format:  ', stats.byType);
 console.log('  by category:', stats.byCategory);
