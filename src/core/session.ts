@@ -3,7 +3,7 @@ import { dailyQuestions } from './daily.ts';
 import { seededRng, shuffle } from './rng.ts';
 import { gradeOf, scoreAnswer, type Grade } from './scoring.ts';
 import * as store from './storage.ts';
-import type { Answer, Category, GameMode, Question, ScoredAnswer } from './types.ts';
+import type { Answer, Category, GameMode, Question, QuestionType, ScoredAnswer } from './types.ts';
 
 export const ARENA_SIZE = 10;
 /** Comparison streak is sudden death; this is the whole tension of the mode. */
@@ -54,10 +54,20 @@ export class Session {
     this.mode = opts.mode;
     const rng = seededRng(`${opts.mode}-${Date.now()}-${Math.random()}`);
 
-    const filtered = filterPool(ALL_QUESTIONS, {
-      ...(opts.categories && opts.categories.length > 0 ? { categories: opts.categories } : {}),
-      ...(opts.mode === 'streak' ? { types: ['comparison' as const] } : {}),
+    const forcedTypes: QuestionType[] | undefined = opts.mode === 'streak' ? ['comparison'] : undefined;
+    const categories = opts.categories && opts.categories.length > 0 ? opts.categories : undefined;
+
+    let filtered = filterPool(ALL_QUESTIONS, {
+      ...(categories ? { categories } : {}),
+      ...(forcedTypes ? { types: forcedTypes } : {}),
     });
+    if (filtered.length === 0 && forcedTypes) {
+      // The category filter emptied the pool for a mode with a forced type
+      // (streak -> comparison-only). Dropping the type constraint here would
+      // let non-comparison questions leak into streak mode, so drop the
+      // category restriction instead and keep the type invariant.
+      filtered = filterPool(ALL_QUESTIONS, { types: forcedTypes });
+    }
     this.pool = filtered.length > 0 ? filtered : [...ALL_QUESTIONS];
 
     switch (opts.mode) {
