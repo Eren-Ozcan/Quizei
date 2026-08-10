@@ -47,8 +47,8 @@ going viral would kill the brand. That's why the rule is baked into the code:
 - Comparison questions must differ by at least **1.15x**. Anything closer counts
   as a coin flip rather than knowledge, and the validator rejects it. (This rule
   actually eliminated a question during development.)
-- `npm run check:sources` verifies every source link over the network. Currently
-  **128/128** reachable.
+- `npm run check:sources` verifies every source link over the network before
+  it can rot silently.
 - Fast-moving data (net worth, subscriber counts, satellite counts) was
   **deliberately left out** of the pool — it rots within a single season.
 
