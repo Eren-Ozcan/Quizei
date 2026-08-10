@@ -139,6 +139,7 @@ const STRINGS = {
   close: { tr: 'Kapat', en: 'Close' },
   categoriesLabel: { tr: 'Kategoriler', en: 'Categories' },
   allCategories: { tr: 'Hepsi', en: 'All' },
+  shareTitle: { tr: 'Quizei', en: 'Quizei' },
   shareTitleDaily: { tr: 'Quizei — Günün Beşlisi', en: 'Quizei — Daily Five' },
 } as const;
 

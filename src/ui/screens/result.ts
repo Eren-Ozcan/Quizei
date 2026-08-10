@@ -136,8 +136,9 @@ function actions(opts: ResultOptions, shareText: (() => string) | null): HTMLEle
   const row = el('div', { class: 'result__actions' });
 
   if (shareText) {
+    const shareTitle = opts.session.mode === 'daily' ? t('shareTitleDaily') : t('shareTitle');
     const shareBtn = button(t('share'), async () => {
-      const outcome = await shareOrCopy(shareText(), t('shareTitleDaily'));
+      const outcome = await shareOrCopy(shareText(), shareTitle);
       if (outcome !== 'failed') {
         shareBtn.textContent = t('copied');
         setTimeout(() => (shareBtn.textContent = t('share')), 1800);
