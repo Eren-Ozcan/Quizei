@@ -127,7 +127,14 @@ function renderHud(session: Session, party: PartyContext | undefined, playerIdx:
     hud.appendChild(
       stat(t('questionOf', { a: session.index + 1, b: total }), '', 'hud__progress-label'),
     );
-    const bar = el('div', { class: 'progress' });
+    const bar = el('div', {
+      class: 'progress',
+      role: 'progressbar',
+      'aria-label': t('questionOf', { a: session.index + 1, b: total }),
+      'aria-valuenow': String(session.index),
+      'aria-valuemin': '0',
+      'aria-valuemax': String(total),
+    });
     bar.appendChild(
       el('div', { class: 'progress__fill', style: `width:${(session.index / total) * 100}%` }),
     );
