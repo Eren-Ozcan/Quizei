@@ -41,8 +41,3 @@ export function shuffle<T>(items: readonly T[], rng: () => number): T[] {
   }
   return out;
 }
-
-export function pickOne<T>(items: readonly T[], rng: () => number): T {
-  if (items.length === 0) throw new Error('pickOne: empty list');
-  return items[Math.floor(rng() * items.length)] as T;
-}
