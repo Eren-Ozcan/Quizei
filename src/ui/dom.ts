@@ -72,7 +72,3 @@ export function button(label: Child, onClick: () => void, cls = 'btn'): HTMLButt
 export function nextFrame(fn: () => void): void {
   requestAnimationFrame(() => requestAnimationFrame(fn));
 }
-
-export function delay(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
