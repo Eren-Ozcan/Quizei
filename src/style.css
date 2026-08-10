@@ -565,7 +565,7 @@ body {
   padding: 0.5rem 0;
 }
 
-.numeric__input:focus {
+.numeric__input:focus:not(:focus-visible) {
   outline: none;
 }
 
