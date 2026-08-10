@@ -97,7 +97,7 @@ src/
     storage.ts     localStorage: streak, high score, accuracy per format
     share.ts       Emoji grid + native share / clipboard fallback
     i18n.ts        TR/EN, language-aware large-number formatting
-  data/          168+ questions, in three files by format
+  data/          Questions, in three files by format (npm run validate:questions prints the current count)
   ui/            Screens; they read core, they don't inject dependencies into it
 ```
 
