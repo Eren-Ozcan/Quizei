@@ -38,6 +38,11 @@ test('the daily number advances by one per day', () => {
   assert.equal(dailyNumber('2026-02-01'), 32);
 });
 
+test('the daily number never drops below 1 for dates before EPOCH', () => {
+  assert.equal(dailyNumber('2025-12-31'), 1);
+  assert.equal(dailyNumber('2025-01-01'), 1);
+});
+
 test('todayKey produces a zero-padded ISO date', () => {
   assert.match(todayKey(new Date(2026, 2, 5)), /^2026-03-05$/);
 });
