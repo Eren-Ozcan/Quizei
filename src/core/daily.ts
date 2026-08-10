@@ -1,6 +1,6 @@
 import { ALL_QUESTIONS } from '../data/index.ts';
 import { seededRng, shuffle } from './rng.ts';
-import type { Question, QuestionType } from './types.ts';
+import { QUESTION_TYPES, type Question, type QuestionType } from './types.ts';
 
 export const DAILY_SIZE = 5;
 
@@ -37,7 +37,7 @@ export function dailyQuestions(dateKey = todayKey()): Question[] {
   const rng = seededRng(`quizei-daily-${dateKey}`);
 
   const byType = new Map<QuestionType, Question[]>();
-  for (const type of ['boolean', 'numeric', 'comparison'] as QuestionType[]) {
+  for (const type of QUESTION_TYPES) {
     byType.set(
       type,
       shuffle(
