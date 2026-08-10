@@ -22,6 +22,9 @@ interface ElAttrs {
   'aria-label'?: string;
   'aria-live'?: string;
   'aria-pressed'?: string;
+  'aria-valuenow'?: string;
+  'aria-valuemin'?: string;
+  'aria-valuemax'?: string;
   'data-key'?: string;
   onClick?: (ev: MouseEvent) => void;
   onInput?: (ev: Event) => void;
