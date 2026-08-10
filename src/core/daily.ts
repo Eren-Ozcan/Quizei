@@ -19,7 +19,9 @@ export function dailyNumber(dateKey: string): number {
   const [ey, em, ed] = EPOCH.split('-').map(Number) as [number, number, number];
   const [y, m, d] = dateKey.split('-').map(Number) as [number, number, number];
   const ms = Date.UTC(y, m - 1, d) - Date.UTC(ey, em - 1, ed);
-  return Math.floor(ms / 86_400_000) + 1;
+  // A clock set before EPOCH (or a pre-launch date) would otherwise render as
+  // "Quizei #0" or a negative puzzle number in the header and share text.
+  return Math.max(1, Math.floor(ms / 86_400_000) + 1);
 }
 
 /**
