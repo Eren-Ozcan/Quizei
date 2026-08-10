@@ -216,7 +216,7 @@ export function formatNumber(n: number): string {
 }
 
 function trim(n: number, locale: string): string {
-  return Number(n.toFixed(n < 10 ? 1 : 0)).toLocaleString(locale);
+  return Number(n.toFixed(Math.abs(n) < 10 ? 1 : 0)).toLocaleString(locale);
 }
 
 /** Ratio shown on the reveal screen: "12x", "1.4x". */
