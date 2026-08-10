@@ -81,6 +81,7 @@ const STRINGS = {
   // Party
   players: { tr: 'Oyuncular', en: 'Players' },
   addPlayer: { tr: 'Oyuncu ekle', en: 'Add player' },
+  removePlayer: { tr: '{n}. oyuncuyu sil', en: 'Remove player {n}' },
   playerName: { tr: 'Oyuncu {n}', en: 'Player {n}' },
   startParty: { tr: 'Başlat', en: 'Start' },
   passTo: { tr: 'Telefonu {name} adlı oyuncuya ver', en: 'Pass the phone to {name}' },

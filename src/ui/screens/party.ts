@@ -41,13 +41,18 @@ export function renderPartySetup(
 
       if (names.length > MIN_PLAYERS) {
         row.appendChild(
-          button(
-            '×',
-            () => {
-              names.splice(i, 1);
-              drawPlayers();
+          el(
+            'button',
+            {
+              class: 'btn btn--icon',
+              type: 'button',
+              'aria-label': t('removePlayer', { n: i + 1 }),
+              onClick: () => {
+                names.splice(i, 1);
+                drawPlayers();
+              },
             },
-            'btn btn--icon',
+            '×',
           ),
         );
       }
