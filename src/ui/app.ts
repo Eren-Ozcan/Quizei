@@ -154,7 +154,7 @@ export function startApp(root: HTMLElement): void {
     screen.appendChild(
       el(
         'div',
-        { class: 'grid' },
+        { class: 'grid', 'aria-label': t('accuracy') },
         ...last.grades.map((g) => el('span', { class: `grid__cell grid__cell--${g}` }, gradeEmoji(g))),
       ),
     );
