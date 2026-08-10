@@ -45,9 +45,7 @@ const STRINGS = {
   yourGuess: { tr: 'Tahminin', en: 'Your guess' },
   submit: { tr: 'Gönder', en: 'Submit' },
   next: { tr: 'Devam', en: 'Next' },
-  finish: { tr: 'Bitir', en: 'Finish' },
   questionOf: { tr: 'Soru {a} / {b}', en: 'Question {a} of {b}' },
-  skip: { tr: 'Geç', en: 'Skip' },
 
   // Reveal
   correct: { tr: 'Doğru!', en: 'Correct!' },
@@ -79,7 +77,6 @@ const STRINGS = {
   // Streak mode
   streakOver: { tr: 'Seri bitti', en: 'Streak over' },
   streakLength: { tr: 'Seri', en: 'Streak' },
-  lives: { tr: 'Can', en: 'Lives' },
 
   // Party
   players: { tr: 'Oyuncular', en: 'Players' },
@@ -134,11 +131,7 @@ const STRINGS = {
 
   // Settings / misc
   language: { tr: 'Dil', en: 'Language' },
-  theme: { tr: 'Tema', en: 'Theme' },
   back: { tr: 'Geri', en: 'Back' },
-  close: { tr: 'Kapat', en: 'Close' },
-  categoriesLabel: { tr: 'Kategoriler', en: 'Categories' },
-  allCategories: { tr: 'Hepsi', en: 'All' },
   shareTitle: { tr: 'Quizei', en: 'Quizei' },
   shareTitleDaily: { tr: 'Quizei — Günün Beşlisi', en: 'Quizei — Daily Five' },
 } as const;
