@@ -1,6 +1,6 @@
 import { t } from '../../core/i18n.ts';
 import * as store from '../../core/storage.ts';
-import type { QuestionType } from '../../core/types.ts';
+import { QUESTION_TYPES, type QuestionType } from '../../core/types.ts';
 import { button, el } from '../dom.ts';
 
 export function renderStats(onBack: () => void, onChanged: () => void): HTMLElement {
@@ -33,7 +33,7 @@ export function renderStats(onBack: () => void, onChanged: () => void): HTMLElem
     comparison: t('formatComparison'),
   };
 
-  for (const type of ['boolean', 'numeric', 'comparison'] as QuestionType[]) {
+  for (const type of QUESTION_TYPES) {
     const stat = save.formats[type];
     const pct = stat.answered > 0 ? Math.round((stat.accuracySum / stat.answered) * 100) : 0;
 
