@@ -10,6 +10,21 @@ are **never committed to this public repo**. They are saved in two places:
    private `Eren-Ozcan/pictures` repo) — copy them there, then commit+push in that
    repo.
 
+## Licensing
+
+This repo is proprietary: the root `LICENSE` is an all-rights-reserved notice
+(copyright Eren Ozcan), and GitHub therefore reports no open-source license.
+Never replace it with MIT or any other permissive licence, and never leave a
+scaffold's own LICENSE file (Expo's, Unity's, a starter template's) in the repo
+root — that would publish this project under someone else's terms.
+
+No third-party fonts or asset packs are bundled. If you add one, keep its licence
+text in the repo, ship that text with the build when the licence demands it (SIL
+OFL fonts do), and create a `THIRD-PARTY-NOTICES.md` listing it.
+
+`package.json` carries `"license": "UNLICENSED"` alongside `"private": true` —
+keep both, so an accidental `npm publish` cannot push the source to the registry.
+
 ## Studio-wide information
 
 For studio-wide questions (not specific to this game) such as the Google account,
